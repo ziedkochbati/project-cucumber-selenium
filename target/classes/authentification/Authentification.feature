@@ -2,10 +2,12 @@
 Feature: Authentification - OrangeHMR
   En tant que utilisateur je souhaite m authentifier
 
+  Background: 
+    Given Je me connect a l application OrangeHMR
+
   @cnx
   Scenario: Authentification - OrangeHMR
-    Given Je me connect a l application OrangeHMR
-    When Je saisi username
-    And je saisi Password
+    When Je saisi username "Admin"
+    And je saisi Password "admin123"
     And je click sur le buton login
-    Then Redirection vers le compte admin
+    Then Redirection vers le compte admin "Welcome"

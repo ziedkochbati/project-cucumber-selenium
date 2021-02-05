@@ -12,7 +12,9 @@ import cucumber.api.junit.Cucumber;
 		//glue = {"src/test/java/com/orangeHRM/e2eTests/stepDefinitions"},
 		plugin = {"pretty", "html:target/cucumber-html-report"},
 		snippets = SnippetType.CAMELCASE,
-		tags = {("@connexion")},
+				tags = {("@background")},
+		//tags = {("@outline, @cnx")},  run multiple feature
+		//tags = {(", ")}, run all feature
 		monochrome = true
 		)
 
